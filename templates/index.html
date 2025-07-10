@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Analyzer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <button class="theme-toggle" id="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </button>
+    
+    <div class="container">
+        <header>
+            <img src="https://img.icons8.com/fluency/96/000000/artificial-intelligence.png" alt="AI logo" class="logo" />
+            <h1>Image Analyzer</h1>
+            <p class="subtitle">Upload any image and get detailed information about what's in it and its technical details.</p>
+        </header>
+        
+        <div class="card">
+            <div class="upload-area" id="upload-area">
+                <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                <div class="upload-text">
+                    <p>Drag and drop your image here</p>
+                    <p>Supports: PNG, JPG, JPEG, GIF, BMP, WEBP</p>
+                </div>
+                <input type="file" id="file-input" accept="image/*" />
+                <div class="file-info" id="file-info" style="display: none;">
+                    <i class="fas fa-file-image"></i>
+                    <span class="file-name" id="file-name"></span>
+                </div>
+            </div>
+            
+            <div id="preview-container">
+                <img id="image-preview" alt="Preview" />
+            </div>
+            
+            <div class="btn-container">
+                <button id="submit-btn" class="btn" disabled>
+                    <i class="fas fa-search"></i>
+                    Analyze Image
+                </button>
+            </div>
+            
+            <div class="error-container" id="error-container">
+                <div class="error-message" id="error-message"></div>
+            </div>
+        </div>
+        
+        <div class="card results-container" id="results-container">
+            <h2 class="result-title">Analysis Results</h2>
+            <div id="results-content"></div>
+            
+            <!-- Integrated metadata dropdown -->
+            <div class="metadata-dropdown" id="metadata-dropdown" style="display: none;">
+                <div class="metadata-header">
+                    <h3 class="metadata-title">Detailed Information</h3>
+                    <div class="metadata-tabs">
+                        <button class="tab-link active" data-tab="basic">Basic</button>
+                        <button class="tab-link" data-tab="camera">Camera</button>
+                        <button class="tab-link" data-tab="technical">Technical</button>
+                        <button class="tab-link" data-tab="colors">Colors</button>
+                        <button class="tab-link" data-tab="exif">All EXIF</button>
+                    </div>
+                </div>
+            
+                <div class="metadata-content" id="metadata-content">
+                    <div id="tab-basic" class="tab-content active">
+                        <div class="metadata-grid" id="basic-metadata"></div>
+                    </div>
+                    <div id="tab-camera" class="tab-content">
+                        <div class="metadata-grid" id="camera-metadata"></div>
+                    </div>
+                    <div id="tab-technical" class="tab-content">
+                        <div class="metadata-grid" id="technical-metadata"></div>
+                    </div>
+                    <div id="tab-colors" class="tab-content">
+                        <div id="color-analysis-content"></div>
+                    </div>
+                    <div id="tab-exif" class="tab-content">
+                        <div class="metadata-grid" id="exif-metadata"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2025 Image Analyzer • Using <a href="https://huggingface.co/" class="credit-link" target="_blank">Hugging Face</a> AI Models</p>
+            <p style="margin-top: 10px; font-size: 0.85rem;">Created by <a href="https://github.com/chirag-gupta7" class="credit-link" target="_blank">chirag-gupta7</a> • <span id="current-date">2025-07-08</span></p>
+            
+            <!-- Open source comment with GitHub icon -->
+            <div class="open-source-info">
+                <p>
+                    <i class="fab fa-github"></i>
+                    This software is open source and available on GitHub
+                </p>
+            </div>
+            
+            <!-- Social media links -->
+            <div class="social-links">
+                <p>Connect with the developer:</p>
+                <div>
+                    <a href="https://www.instagram.com/chirag_gupta._.1/" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://github.com/chirag-gupta7" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
