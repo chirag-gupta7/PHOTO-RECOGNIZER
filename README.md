@@ -430,6 +430,6 @@ This project is open source and available under the MIT License.
 
 ---
 
-**Made with ❤️ by Chirag Gupta**
+**Made with ❤️ by [Chirag Gupta](https://github.com/chirag-gupta7)**
 
 *This project demonstrates the power of combining modern web technologies with artificial intelligence to create intuitive, user-friendly applications.*
