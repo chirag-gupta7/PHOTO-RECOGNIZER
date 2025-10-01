@@ -2,7 +2,7 @@
 
 A powerful, interactive web application that analyzes photos using artificial intelligence to identify objects, extract metadata, and provide detailed insights about images. Built with Flask, Python, and modern web technologies.
 
-![AI Image Analyzer Demo](hhttps://youtu.be/iQtsDFo8u_E)
+![AI Image Analyzer Demo](https://youtu.be/iQtsDFo8u_E)
 
 ## 📋 Table of Contents
 
