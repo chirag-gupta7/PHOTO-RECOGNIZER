@@ -4,9 +4,15 @@ A powerful, interactive web application that analyzes photos using artificial in
 
 ## 📺 Demo Video
 
-[![AI Image Analyzer Demo](https://img.youtube.com/vi/iQtsDFo8u_E/maxresdefault.jpg)](https://youtu.be/iQtsDFo8u_E)
-
-*Click the image above to watch a full demonstration of the AI Image Analyzer application*
+<div align="center">
+  <a href="https://youtu.be/iQtsDFo8u_E">
+    <img src="https://img.youtube.com/vi/iQtsDFo8u_E/hqdefault.jpg" alt="AI Image Analyzer Demo" style="width:100%;max-width:600px;">
+  </a>
+  <br>
+  <strong>🎬 Click the image above to watch the full demo video</strong>
+  <br>
+  <a href="https://youtu.be/iQtsDFo8u_E">Watch on YouTube →</a>
+</div>
 
 ## 📋 Table of Contents
 
