@@ -12,6 +12,8 @@ import numpy as np
 from datetime import datetime
 import base64
 import traceback
+import webbrowser
+import threading
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -687,6 +689,18 @@ if __name__ == '__main__':
     if API_KEY == "hf_your_actual_api_key_here" or len(API_KEY) < 30:
         logger.warning("⚠️ WARNING: You appear to be using a placeholder API key. The application may not work correctly.")
         logger.warning("Please replace it with a valid Hugging Face API key in your .env file.")
+    
+    # Function to open browser after a short delay
+    def open_browser():
+        time.sleep(1)  # Wait for server to start
+        webbrowser.open('http://localhost:81')
+    
+    # Only open browser if not in debug mode's reloader process
+    if os.environ.get('WERKZEUG_RUN_MAIN') != 'true':
+        threading.Timer(1.0, open_browser).start()
+        logger.info("🌐 Browser will open automatically in 1 second...")
+    
+    logger.info("📱 Access the app at: http://localhost:81")
     
     app.run(
         host='0.0.0.0', 
