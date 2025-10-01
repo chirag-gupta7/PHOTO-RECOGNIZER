@@ -2,10 +2,26 @@
 
 A powerful, interactive web application that analyzes photos using artificial intelligence to identify objects, extract metadata, and provide detailed insights about images. Built with Flask, Python, and modern web technologies.
 
-![Image Analyzer Demo](https://img.icons8.com/fluency/96/000000/artificial-intelligence.png)
+![AI Image Analyzer Demo](https://via.placeholder.com/800x400/4285f4/ffffff?text=AI+Image+Analyzer+Demo)
+
+## 📋 Table of Contents
+
+- [Features](#-features)
+- [Quick Start](#-quick-start)
+- [Technology Stack](#️-technology-stack)
+- [Project Structure](#-project-structure)
+- [Core Components](#-core-components)
+- [Usage Guide](#-usage-guide)
+- [API Integration](#-api-integration-details)
+- [Configuration](#-configuration-options)
+- [Troubleshooting](#-troubleshooting)
+- [Security](#-security-considerations)
+- [Browser Compatibility](#-browser-compatibility)
+- [Future Enhancements](#-future-enhancements)
+- [Contributing](#-contributing)
+- [License](#-license)
 
 ## ✨ Features
-
 ### 🤖 AI-Powered Image Classification
 - **Object Detection**: Identifies objects, people, animals, vehicles, and more
 - **Multi-Label Classification**: Recognizes multiple subjects in a single image
@@ -32,7 +48,6 @@ A powerful, interactive web application that analyzes photos using artificial in
 - **API Integration**: Seamless connection to Hugging Face AI models
 - **Performance Monitoring**: Request timing and processing metrics
 - **File Validation**: Comprehensive file type and size checking
-
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -42,39 +57,39 @@ A powerful, interactive web application that analyzes photos using artificial in
 
 ### Installation
 
-1. **Clone the repository** (or download the files):
-```bash
-git clone <your-repo-url>
-cd WHAT KIND OF PHOTO
-```
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/chirag-gupta7/PHOTO-RECOGNIZER.git
+   cd PHOTO-RECOGNIZER
+   ```
 
-2. **Install dependencies**:
-```bash
-pip install -r requirements.txt
-```
+2. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-3. **Set up environment variables**:
-Create a `.env` file in the project root:
-```env
-HUGGING_FACE_API_URL=https://api-inference.huggingface.co/models/google/vit-base-patch16-224
-HUGGING_FACE_API_KEY=hf_your_actual_api_key_here
-FLASK_ENV=development
-FLASK_DEBUG=True
-```
+3. **Set up environment variables:**
+   Create a `.env` file in the project root:
+   ```env
+   HUGGING_FACE_API_URL=https://api-inference.huggingface.co/models/google/vit-base-patch16-224
+   HUGGING_FACE_API_KEY=hf_your_actual_api_key_here
+   FLASK_ENV=development
+   FLASK_DEBUG=True
+   ```
 
-4. **Get your Hugging Face API key**:
-   - Visit [Hugging Face](https://huggingface.co/)
+4. **Get your Hugging Face API key:**
+   - Visit [Hugging Face](https://huggingface.co)
    - Create a free account
    - Go to Settings → Access Tokens
    - Create a new token and copy it to your `.env` file
 
-5. **Run the application**:
-```bash
-python photo_check.py
-```
+5. **Run the application:**
+   ```bash
+   python photo_check.py
+   ```
 
-6. **Open your browser** and go to `http://localhost:81`
-
+6. **Open your browser:**
+   The application will automatically open at `http://localhost:81`
 ## 🛠️ Technology Stack
 
 ### Backend Technologies
@@ -96,11 +111,10 @@ python photo_check.py
 - **Vision Transformer (ViT)**: Google's ViT-base-patch16-224 model
 - **Image Classification**: Multi-class object recognition
 - **API Integration**: RESTful API communication
-
 ## 📁 Project Structure
 
 ```
-WHAT KIND OF PHOTO/
+PHOTO-RECOGNIZER/
 ├── photo_check.py          # Main Flask application
 ├── requirements.txt        # Python dependencies
 ├── .env                   # Environment variables (create this)
@@ -114,18 +128,19 @@ WHAT KIND OF PHOTO/
     └── index.html         # Main HTML template
 ```
 
+
 ## 🔧 Core Components
 
 ### 1. Flask Application (`photo_check.py`)
 
-#### Main Features:
-- **File Upload Handler**: Processes image uploads with validation
-- **API Integration**: Connects to Hugging Face models
-- **Metadata Extraction**: Comprehensive EXIF and image analysis
-- **Error Handling**: Robust error management with user-friendly messages
-- **Health Check**: API status monitoring endpoint
+**Main Features:**
+- File Upload Handler: Processes image uploads with validation
+- API Integration: Connects to Hugging Face models
+- Metadata Extraction: Comprehensive EXIF and image analysis
+- Error Handling: Robust error management with user-friendly messages
+- Health Check: API status monitoring endpoint
 
-#### Key Functions:
+**Key Functions:**
 ```python
 def get_image_metadata(image_bytes)    # Extract comprehensive metadata
 def query_huggingface_api(image_bytes) # Connect to AI models
@@ -136,31 +151,30 @@ def extract_image_insights(predictions, metadata) # Generate insights
 
 ### 2. Frontend Interface (`templates/index.html`)
 
-#### Components:
-- **Upload Area**: Drag & drop with visual feedback
-- **Image Preview**: Real-time image display
-- **Results Display**: Organized prediction results
-- **Metadata Tabs**: Categorized technical information
-- **Theme Toggle**: Dark/light mode switcher
+**Components:**
+- Upload Area: Drag & drop with visual feedback
+- Image Preview: Real-time image display
+- Results Display: Organized prediction results
+- Metadata Tabs: Categorized technical information
+- Theme Toggle: Dark/light mode switcher
 
 ### 3. Styling (`static/css/style.css`)
 
-#### Features:
-- **CSS Custom Properties**: Dynamic theming system
-- **Responsive Design**: Mobile-first approach
-- **Animations**: Smooth transitions and hover effects
-- **Color Schemes**: Carefully crafted light/dark themes
-- **Component Library**: Reusable UI components
+**Features:**
+- CSS Custom Properties: Dynamic theming system
+- Responsive Design: Mobile-first approach
+- Animations: Smooth transitions and hover effects
+- Color Schemes: Carefully crafted light/dark themes
+- Component Library: Reusable UI components
 
 ### 4. Interactive Logic (`static/js/script.js`)
 
-#### Functionality:
-- **File Handling**: Drag & drop and click-to-upload
-- **API Communication**: Fetch API for backend requests
-- **UI Updates**: Dynamic content rendering
-- **Error Management**: User-friendly error displays
-- **Theme Persistence**: Local storage for preferences
-
+**Functionality:**
+- File Handling: Drag & drop and click-to-upload
+- API Communication: Fetch API for backend requests
+- UI Updates: Dynamic content rendering
+- Error Management: User-friendly error displays
+- Theme Persistence: Local storage for preferences
 ## 🎯 Usage Guide
 
 ### Basic Usage
@@ -170,16 +184,15 @@ def extract_image_insights(predictions, metadata) # Generate insights
 4. **Explore Metadata**: Click "Show Detailed Information" for technical details
 
 ### Supported Formats
-- **JPEG** (.jpg, .jpeg)
-- **PNG** (.png)
-- **GIF** (.gif)
-- **BMP** (.bmp)
-- **WEBP** (.webp)
+- JPEG (`.jpg`, `.jpeg`)
+- PNG (`.png`)
+- GIF (`.gif`)
+- BMP (`.bmp`)
+- WEBP (`.webp`)
 
 ### File Size Limits
 - **Maximum**: 16MB per image
 - **Recommended**: Under 5MB for optimal performance
-
 ## 🔍 API Integration Details
 
 ### Hugging Face Models
@@ -208,52 +221,46 @@ headers = {
 - **401 Unauthorized**: Invalid API key
 - **400 Bad Request**: Invalid image format
 - **Network Errors**: Connection timeout handling
+### 📊 Metadata Analysis Features
 
-## 📊 Metadata Analysis Features
-
-### EXIF Data Extraction
-```python
-# Camera Information
+#### EXIF Data Extraction
+**Camera Information:**
 - Make/Model: Camera manufacturer and model
 - Lens: Lens model and specifications
 - Exposure: Shutter speed, aperture, ISO
 - Date/Time: Photo capture timestamp
 - GPS: Location data if available
 
-# Technical Details
+**Technical Details:**
 - Dimensions: Width x Height in pixels
 - File Size: Size in KB/MB
 - Format: JPEG, PNG, etc.
 - Color Mode: RGB, RGBA, etc.
-```
 
-### Color Analysis
-```python
-# Advanced Color Processing
+#### Color Analysis
+**Advanced Color Processing:**
 - Dominant Colors: K-means clustering approach
 - Average Color: RGB and HEX values
 - Brightness: Percentage and category
 - Contrast: Standard deviation analysis
 - Color Histogram: RGB distribution
-```
 
-### Image Processing
-```python
-# Metadata Enhancement
+#### Image Processing
+**Metadata Enhancement:**
 - Thumbnail Generation: 200x200 preview
 - Hash Calculation: MD5 and SHA256
 - Aspect Ratio: Calculated ratio
 - Processing Time: Performance metrics
-```
 
-## 🎨 UI/UX Features
 
-### Responsive Design
+### 🎨 UI/UX Features
+
+#### Responsive Design
 - **Mobile-First**: Optimized for smartphones
 - **Tablet Support**: Adapted layouts for tablets
 - **Desktop Enhancement**: Full-featured desktop experience
 
-### Theme System
+#### Theme System
 ```css
 /* CSS Custom Properties */
 :root {
@@ -273,12 +280,11 @@ body.dark-mode {
 }
 ```
 
-### Animations
+#### Animations
 - **Fade In**: Smooth content appearance
 - **Progress Bars**: Animated confidence scores
 - **Hover Effects**: Interactive element feedback
 - **Loading States**: Visual processing indicators
-
 ## 🔧 Configuration Options
 
 ### Environment Variables
@@ -307,15 +313,16 @@ API_URL = "https://api-inference.huggingface.co/models/microsoft/resnet-50"
 API_URL = "https://api-inference.huggingface.co/models/facebook/detr-resnet-50"
 ```
 
-## 🚀 Performance Optimization
 
-### Backend Optimizations
+### 🚀 Performance Optimization
+
+#### Backend Optimizations
 - **Thumbnail Generation**: Reduced image size for faster processing
 - **Concurrent Processing**: Parallel metadata extraction
 - **Caching**: Response caching for repeated requests
 - **Error Recovery**: Graceful degradation on API failures
 
-### Frontend Optimizations
+#### Frontend Optimizations
 - **Lazy Loading**: Images loaded on demand
 - **Debounced Requests**: Prevent duplicate API calls
 - **Local Storage**: Theme preferences persistence
@@ -327,86 +334,44 @@ API_URL = "https://api-inference.huggingface.co/models/facebook/detr-resnet-50"
 
 #### 1. API Key Problems
 **Problem**: "Invalid API key" error
-**Solution**: 
+
+**Solution**:
 - Check your `.env` file exists
 - Verify API key format starts with `hf_`
 - Ensure no extra spaces in the key
 
 #### 2. Model Loading
 **Problem**: "Model is currently loading" message
-**Solution**: 
+
+**Solution**:
 - Wait 2-3 minutes for model to initialize
 - Try again after delay
 - Check Hugging Face service status
 
 #### 3. File Upload Issues
 **Problem**: "File too large" or "Unsupported format"
-**Solution**: 
+
+**Solution**:
 - Ensure file is under 16MB
 - Use supported formats (JPEG, PNG, GIF, BMP, WEBP)
 - Check file isn't corrupted
 
 #### 4. Dark Mode Not Working
 **Problem**: Theme toggle not functioning
-**Solution**: 
+
+**Solution**:
 - Clear browser cache
 - Enable JavaScript
 - Check browser console for errors
 
 ### Debug Mode
 Enable debug mode for detailed error messages:
-```python
+```env
 FLASK_DEBUG=True
 ```
 
-## 🔐 Security Considerations
 
-### Input Validation
-- **File Type Checking**: Whitelist approach for file extensions
-- **Size Limits**: Prevent DoS attacks with large files
-- **Content Validation**: Verify files are actual images
-
-### API Security
-- **Key Management**: Environment variables for sensitive data
-- **Request Limits**: Rate limiting for API calls
-- **Error Sanitization**: No sensitive data in error messages
-
-### Web Security
-- **XSS Prevention**: Escaped user input
-- **CSRF Protection**: Secure form handling
-- **Content Security**: Proper MIME type handling
-
-## 🌐 Browser Compatibility
-
-### Supported Browsers
-- **Chrome**: 70+
-- **Firefox**: 65+
-- **Safari**: 12+
-- **Edge**: 79+
-
-### Required Features
-- **JavaScript ES6+**: Arrow functions, async/await
-- **CSS Grid**: Layout support
-- **Fetch API**: Network requests
-- **Local Storage**: Theme persistence
-
-## 📱 Mobile Support
-
-### Responsive Breakpoints
-```css
-/* Mobile First */
-@media (max-width: 768px) {
-    .container { padding: 1rem; }
-    .metadata-grid { grid-template-columns: 1fr; }
-}
-```
-
-### Touch Optimization
-- **Touch Targets**: Minimum 44px tap areas
-- **Gesture Support**: Drag & drop on mobile
-- **Viewport Configuration**: Proper mobile scaling
-
-## 🎯 Future Enhancements
+## � Future Enhancements
 
 ### Planned Features
 - **Batch Processing**: Multiple image analysis
@@ -421,44 +386,6 @@ FLASK_DEBUG=True
 - **Authentication**: User accounts
 - **API Rate Limiting**: Request throttling
 - **Containerization**: Docker support
-
-## 👨‍💻 Development
-
-### Setup Development Environment
-```bash
-# Clone repository
-git clone <repo-url>
-cd WHAT KIND OF PHOTO
-
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run in development mode
-python photo_check.py
-```
-
-### Code Structure
-```python
-# Main application structure
-photo_check.py
-├── Configuration & Setup
-├── Helper Functions
-│   ├── get_image_metadata()
-│   ├── query_huggingface_api()
-│   ├── process_api_response()
-│   ├── format_predictions()
-│   └── extract_image_insights()
-├── Flask Routes
-│   ├── index() - Main page
-│   ├── upload() - File processing
-│   └── health() - Health check
-└── Error Handlers
-```
 
 ## 📄 License
 
@@ -480,8 +407,8 @@ This project is open source and available under the MIT License.
 - **Feature Requests**: Submit enhancement proposals
 
 ### Developer Contact
-- **GitHub**: [chirag-gupta7](https://github.com/chirag-gupta7)
-- **Instagram**: [@chirag_gupta._.1](https://www.instagram.com/chirag_gupta._.1/)
+- **GitHub**: [@chirag-gupta7](https://github.com/chirag-gupta7)
+- **Instagram**: [@chirag_gupta._.1](https://instagram.com/chirag_gupta._.1)
 
 ## 🙏 Acknowledgments
 
